@@ -38,7 +38,7 @@
                         <input type="email" name="clientEmail" id="clientEmail" required <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?>>
 
                         <label for="clientPassword">Password</label><br>
-                        <span>Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span>
+                        <span style="color: #4c96d7">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span>
                         <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 
                         <button type="submit" name="submit" id="regBtn">Register</button>

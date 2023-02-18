@@ -4,7 +4,7 @@ $classificationList = '<select name="classificationId" id="classificationList">'
 foreach ($classifications as $classification) {
     $classificationList .= "<option value='$classification[classificationId]'";
     if (isset($classificationId)) {
-        if ($classification['classificationId'] === $classificationId) {
+        if ($classification['classificationId'] === (int)$classificationId) {
             $classificationList .= 'selected = "selected" ';
         }
     }
@@ -83,7 +83,7 @@ $classificationList .= '</select>';
                                                                                         echo "value='$invColor'";
                                                                                     }  ?>><br>
                     </label><br>
-                    <button type="submit" name="submit" id="vehicleBtn" required> Add Vehicle</button>
+                    <button type="submit" name="submit" id="vehicleBtn"> Add Vehicle</button>
 
                     <!-- Add the action name - value pair -->
                     <input type="hidden" name="action" value="addCar">

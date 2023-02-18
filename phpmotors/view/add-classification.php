@@ -32,8 +32,8 @@
                 ?>
                 <form action="/phpmotors/vehicles/index.php" method="post">
                     
-                    <label for="classificationName">Classification Name</label> <br><br>
-                    <span style="color: green">Classification Name must be less than 30 letters!!</span><br>
+                    <label for="classificationName">Classification Name</label> <br>
+                    <span style="color: #4c96d7">Classification Name must be less than 30 characters!!</span><br>
                         <input type="text" name="classificationName" id="classificationName" required placeholder="enter classification name" maxlength="30" <?php if(isset($classificationName)){echo "value='$classificationName'";}  ?>> <br>
 
         

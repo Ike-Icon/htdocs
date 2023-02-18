@@ -225,6 +225,8 @@ figure figcaption {
   padding: 15px;
   box-sizing: border-box;
   font-size: 15px;
+  border-radius: 10px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 #submitBtn {
@@ -232,7 +234,7 @@ figure figcaption {
   text-transform: uppercase;
   outline: 0;
   background: #1c3b57;
-  width: 100%;
+  width: 50%;
   border: 0;
   padding: 14px;
   color: #FFFFFF;
@@ -240,6 +242,8 @@ figure figcaption {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  border-radius: 15px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 
@@ -282,7 +286,10 @@ figure figcaption {
   margin: 0 0 18px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow:   3px 5px 3px #b8b8b8;
+  
 }
 
 #regBtn {
@@ -290,7 +297,7 @@ figure figcaption {
   text-transform: uppercase;
   outline: 0;
   background: #1c3b57;
-  width: 100%;
+  width: 50%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
@@ -298,6 +305,9 @@ figure figcaption {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  box-shadow:   3px 5px 3px #b8b8b8;
+  border-radius: 15px;
+  
 }
 
 #regBtn:hover,
@@ -324,7 +334,9 @@ figure figcaption {
   margin: 0 0 18px;
   padding: 8px;
   box-sizing: border-box;
-  font-size: 14px
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 #classBtn {
@@ -340,6 +352,7 @@ figure figcaption {
   transition: all 0.3 ease;
   cursor: pointer;
   border-radius: 10px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 #classBtn:hover,
@@ -363,12 +376,16 @@ figure figcaption {
   margin: 0 0 7px;
   padding: 4px;
   box-sizing: border-box;
-  font-size: 14px
+  font-size: 14px;
+  border-radius: 8px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 .addVehicle-wrapper textarea {
   outline: 0;
   background: #afd4f783;
+  border-radius: 8px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 #vehicleBtn {
@@ -385,6 +402,7 @@ figure figcaption {
   transition: all 0.3 ease;
   cursor: pointer;
   border-radius: 10px;
+  box-shadow:   3px 5px 3px #b8b8b8;
 }
 
 #vehicleBtn:hover,
