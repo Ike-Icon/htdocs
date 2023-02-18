@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Share Tech Mono', sans-serif;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-size: 1.2em;
+}
+
+#wrapper {
+  width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+hr {
+  border: 2px solid #3a3a3a;
+}
+
+section {
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+section h2,
+h1 {
+  margin-left: .25em;
+}
+
+/**
+ Header styles
+  */
+header div {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+header a {
+  align-self: center;
+  text-decoration: none;
+  color: #3a3a3a;
+  font-size: 1.2em;
+}
+
+/**
+ Nav styles
+  */
+nav {
+  background-color: #3a3a3a;
+}
+
+nav ul {
+  display: flex;
+  padding: 0 0 0 .25rem;
+  justify-content: space-evenly;
+  max-width: 100%;
+
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+nav li {
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+
+nav ul li a:hover {
+  background-color: #4c96d7;
+}
+
+/**
+ Footer styles
+  */
+footer p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: .9em;
+}
+
+footer {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 0 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 30px;
+}
+
+/* main page */
+
+main {
+  padding-left: .25rem;
+}
+
+#delorean {
+  background-image: url("/phpmotors/images/delorean.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+#delorean h2 {
+  margin-left: 0;
+}
+
+#delorean a:hover {
+  opacity: .5;
+}
+
+#delorean li {
+  list-style: none;
+  color: #4c96d7;
+
+}
+
+#delorean li h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #4c96d7;
+}
+
+#delorean ul {
+  padding-left: 0;
+  margin-top: 0;
+  max-width: 200px;
+  margin-left: .5em;
+  margin-bottom: 8em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#delorean li {
+  font-size: .85em;
+}
+
+#actionbtn {
+  display: none;
+}
+
+#actionbtn:hover {
+  opacity: .5;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: center;
+  width: 100%;
+  padding-left: .25em;
+
+}
+
+.flex a {
+  width: 100%;
+}
+
+.add-col {
+  background-color: #4c96d7;
+  height: 5.5em;
+  width: 95%;
+  border: #3a3a3a solid 1px;
+}
+
+a figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+  padding-top: .5em;
+}
+
+figure figcaption {
+  text-align: center;
+}
+
+#review li {
+  font-size: .9em;
+  margin-bottom: 1em;
+}
+
+/* ***login page */
+.login-wrapper {
+  /* position: relative; */
+  background: #FFFFFF;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.input-login input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+#submitBtn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1c3b57;
+  width: 100%;
+  border: 0;
+  padding: 14px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+
+#submitBtn:hover,
+#submitBtn:active,
+#submitBtn:focus {
+  background: #4c96d775;
+}
+
+.memberLogin {
+  margin: 30px 0 0;
+  color: #3a3a3a;
+  font-size: 17px;
+}
+
+.memberLogin a {
+  color: #065197;
+  text-decoration: none;
+}
+
+
+
+/******** Register page */
+.register-wrapper {
+  background: #FFFFFF;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.register-input input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 18px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px
+}
+
+#regBtn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1c3b57;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#regBtn:hover,
+#regBtn:active,
+#regBtn:focus {
+  background: #4c96d775;
+}
+
+
+/* Add classification page  */
+.addClass-wrapper {
+  max-width: 50%;
+  margin: 50px auto;
+  padding: 45px;
+  text-align: center;
+
+}
+
+.addClass-wrapper input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #afd4f783;
+  border: 1;
+  margin: 0 0 18px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px
+}
+
+#classBtn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1c3b57;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#classBtn:hover,
+#classBtn:active,
+#classBtn:focus {
+  background: #4c96d775;
+}
+
+/* Add Vehicle page  */
+.addVehicle-wrapper {
+  max-width: 100%;
+  padding: 45px;
+  text-align: left;
+}
+
+.addVehicle-wrapper input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #afd4f783;
+  border: 1;
+  margin: 0 0 7px;
+  padding: 4px;
+  box-sizing: border-box;
+  font-size: 14px
+}
+
+.addVehicle-wrapper textarea {
+  outline: 0;
+  background: #afd4f783;
+}
+
+#vehicleBtn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1c3b57;
+  /* width: 100%; */
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#vehicleBtn:hover,
+#vehicleBtn:active,
+#vehicleBtn:focus {
+  background: #4c96d775;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("/phpmotors/images/site/small_check.jpg");
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  /**
+   Nav Styles
+    */
+  nav {
+    margin-top: .75rem;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    margin: 0;
+    font-size: 1.2em;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    width: 4.5em;
+    padding: .25rem 0;
+  }
+
+  nav a:hover {
+    color: #3a3a3a;
+    background-color: #fff;
+  }
+
+
+  #wrapper {
+    border: 5px solid #4c96d7;
+    border-radius: 10px;
+    margin-top: 1em;
+    width: 75%;
+  }
+
+  #delorean ul {
+    font-size: 1.6em;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 15em;
+  }
+
+  #delorean {
+    background-size: contain;
+    margin-bottom: 0;
+  }
+
+  #actionbtn {
+    display: block;
+    width: 90%;
+    margin-top: 1.5em;
+  }
+
+  .flex-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #review h2,
+  #add-ons h2 {
+    font-size: 1.4em;
+    margin-bottom: 2em;
+  }
+
+  #add-ons {
+    order: -1;
+  }
+
+  #review li {
+    font-size: 1.1em;
+  }
+
+  #add-ons {
+    width: 45%;
+  }
+
+  #add-ons,
+  #review {
+    margin-top: 0;
+  }
+
+
+}
