@@ -22,21 +22,23 @@
                 <h1>PHP Motors Login</h1>
                 <div class="input-login">
                     <?php
-                    if (isset($message)) {
-                        echo $message;
+                    if (isset($_SESSION['message'])) {
+                        echo $_SESSION['message'];
                     }
                     ?>
-                    <form action="/phpmotors/accounts/index.php" method="post">
+                    <form action="/phpmotors/accounts/" method="post">
                         <label for="clientEmail" id="mail">Email </label>
-                        <input type="email" name="clientEmail" id="clientEmail" required <?php if(isset($clientEmail)){echo "value='$clientEmail'";}  ?>>
+                        <input type="email" name="clientEmail" id="clientEmail" required <?php if (isset($clientEmail)) {
+                                                                                                echo "value='$clientEmail'";
+                                                                                            }  ?>>
 
                         <label for="clientPassword" id="password">Password </label><br>
-                        
+
                         <input type="password" name="clientPassword" id="clientPassword" required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-                        <span style= "color: #4c96d7">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br><br>
+                        <span style="color: #4c96d7">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span><br><br>
 
                         <button type="submit" id="submitBtn">Login</button>
-                        
+
                         <!-- Add the action name - value pair -->
                         <input type="hidden" name="action" value="Login">
                     </form>

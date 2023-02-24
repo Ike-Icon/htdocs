@@ -105,6 +105,7 @@ footer p {
 footer {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 0 5px 0 rgba(0, 0, 0, 0.24);
   padding: 30px;
+  margin-top: 30px;
 }
 
 /* main page */
@@ -233,7 +234,7 @@ figure figcaption {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #1c3b57;
+  background: #0f1e2c;
   width: 50%;
   border: 0;
   padding: 14px;
@@ -411,6 +412,11 @@ figure figcaption {
   background: #4c96d775;
 }
 
+ /* Admin page  */
+#admin-Wrapper{
+  padding: 20px;
+  
+}
 
 
 

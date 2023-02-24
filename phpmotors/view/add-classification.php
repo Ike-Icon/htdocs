@@ -1,3 +1,12 @@
+<?php
+// check if the client is logged in and has a clientLevel greater than 1
+if (!isset($_SESSION['loggedin']) || $_SESSION['clientData']['clientLevel'] < 2) {
+    
+    // header function and exit the script
+    header('Location: /phpmotors/');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

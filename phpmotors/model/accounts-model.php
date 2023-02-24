@@ -35,3 +35,53 @@ VALUES (:clientFirstname, :clientLastname, :clientEmail, :clientPassword)';
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+
+
+// Check for an existing email address
+function checkExistingEmail($clientEmail)
+{   
+    // Create a connection object from the phpmotors connection function
+    $db =  phpmotorsConnect();
+    
+    // The SQL statement to be used with the database
+    $sql = 'SELECT clientEmail FROM clients WHERE clientEmail = :email';
+
+    // The next line creates the prepared statement using the phpmotors connection      
+    $stmt = $db->prepare($sql);
+
+    // The next line runs the prepared statement 
+    // $stmt->bindParam(':email', $clientEmail);
+    $stmt->bindValue(':email', $clientEmail, PDO::PARAM_STR);
+
+    // The next line gets the data from the database and 
+    // stores it as an array in the $clientEmail variable 
+    $stmt->execute();
+
+    // The next line closes the interaction with the database 
+    $matchEmail = $stmt->fetch(PDO::FETCH_NUM);
+
+    // The next line sends the array of data back to where the function
+    $stmt->closeCursor();
+
+    if (empty($matchEmail)) {
+        return 0;
+        // echo 'Nothing found';
+    } else {
+        return 1;
+        // echo 'Match Found';
+        // exit;
+    }
+}
+
+
+// Get client data based on an email address
+function getClient($clientEmail){
+    $db = phpmotorsConnect();
+    $sql = 'SELECT clientId, clientFirstname, clientLastname, clientEmail, clientLevel, clientPassword FROM clients WHERE clientEmail = :clientEmail';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':clientEmail', $clientEmail, PDO::PARAM_STR);
+    $stmt->execute();
+    $clientData = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $clientData;
+   }
