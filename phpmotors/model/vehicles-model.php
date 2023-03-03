@@ -73,3 +73,22 @@ function addInventory($invMake, $invModel, $invDescription, $invImage, $invThumb
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+
+
+// Get vehicles by classificationId 
+function getInventoryByClassification($classificationId){ 
+    // Calls the database connection
+    $db = phpmotorsConnect(); 
+    // the sql statement
+    $sql = ' SELECT * FROM inventory WHERE classificationId = :classificationId'; 
+    // Creates the PDO prepared statement.
+    $stmt = $db->prepare($sql); 
+    // Replaces the named placeholder with the actual value as an integer.
+    $stmt->bindValue(':classificationId', $classificationId, PDO::PARAM_INT); 
+    $stmt->execute(); 
+    // Requests a multi-dimensional array of the vehicles as an associative array, stores the array in a variable.
+    $inventory = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    // Returns the array.
+    $stmt->closeCursor(); 
+    return $inventory; 
+   }

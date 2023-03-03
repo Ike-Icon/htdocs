@@ -47,11 +47,11 @@ if ($action == NULL) {
 switch ($action) {
     case 'somthing':
         break;
-        
+
     case 'add-classification':
         include '../view/add-classification.php';
         break;
-        
+
     case 'add-vehicle':
         include '../view/add-vehicle.php';
         break;
@@ -84,7 +84,6 @@ switch ($action) {
             $theMessage = "<p style='color: green'>You have successfull added $invMake </p>";
             include '../view/vehicle-man.php';
             exit;
-
         } else {
             $theMessage = "<p style='color: red'>Sorry, the addition of vehicle failed</p>";
             include '../view/add-vehicle.php';
@@ -111,21 +110,35 @@ switch ($action) {
         if ($addOutcome === 1) {
             $theClassMessage = '<p> $classificationName has been added successfully to the Car Classification</p>';
             include '../view/vehicle-man.php';
-            
+
             //the next line make it so that a refresh of the page will not result in
             //  the form being submitted again and it will also refresh 
             //  the navigation so that the new classification shows up
-            header('Location: http://localhost/phpmotors/vehicles');   
-            
+            header('Location: http://localhost/phpmotors/vehicles');
         } else {
             $theClassMessage = '<p style="color: blue">Please provide information for all empty form fields.</p>';
             include '../view/add-classification.php';
             exit;
-
         }
         break;
 
+        
+        // Get vehicles by classificationId 
+        // Used for starting Update & Delete process 
+    case 'getInventoryItems':
+
+        // Get the classificationId 
+        $classificationId = filter_input(INPUT_GET, 'classificationId', FILTER_SANITIZE_NUMBER_INT);
+
+        // Fetch the vehicles by classificationId from the DB 
+        $inventoryArray = getInventoryByClassification($classificationId);
+        
+        // Convert the array to a JSON object and send it back 
+        echo json_encode($inventoryArray);
+        break;
+
     default:
+        $classificationList = buildClassificationList($classifications);
         include '../view/vehicle-man.php';
         break;
 }
