@@ -30,6 +30,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="admin-Wrapper">
                 <?php
                   echo '<h1>Welcome, ' . $_SESSION['clientData']['clientFirstname'] . '</h1>';
+                  echo '<p>You are currently logged in.</p>';
+            
 
                     // Display the user's data in an unordered list
                     echo '<ul>';
@@ -38,8 +40,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     echo '<li><strong>Email Address:</strong> ' . $_SESSION['clientData']['clientEmail'] . '</li>';
                     echo '<li><strong>Client Level:</strong> ' . $_SESSION['clientData']['clientLevel'] . '</li>'; 
                     echo '</ul><br>';
-   
+
+                    echo'<a href="accounts_controller.php?action=update">Update Account Information</a>';
+
+                    // Display the session message, if it exists
+                    if (isset($_SESSION['message'])) {
+                        echo '<p>' . $_SESSION['message'] . '</p>';
+                        unset($_SESSION['message']);
+                    }
+                    
+
                 if ($_SESSION['clientData']['clientLevel'] > 1) {
+                    // Display the inventory management link for administrative clients
                     echo '<h2>Vehicle Management !</h2>
                     <p>Do you want to navigate to the Vehicle Management page?</p>
                     <p>Click <a href="/phpmotors/vehicles/" title="The Vehicle Management page">Here</a>!</p>';

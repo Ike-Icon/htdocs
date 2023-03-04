@@ -27,6 +27,7 @@
                     }
                     ?>
                     <form action="/phpmotors/accounts/" method="post">
+                        <fieldset>
                         <label for="clientEmail" id="mail">Email </label>
                         <input type="email" name="clientEmail" id="clientEmail" required <?php if (isset($clientEmail)) {
                                                                                                 echo "value='$clientEmail'";
@@ -41,6 +42,7 @@
 
                         <!-- Add the action name - value pair -->
                         <input type="hidden" name="action" value="Login">
+                        </fieldset>
                     </form>
                     <div class="memberLogin">Not yet a member?<a href="/phpmotors/accounts/index.php?action=register" title="Register with PHP Motors" id="reg">Sign-up</a></div>
                 </div>
