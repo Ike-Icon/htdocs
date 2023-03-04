@@ -4,6 +4,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['clientData']['clientLevel'] < 2)
     header('Location: /phpmotors/');
     exit;
 }
+
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,3 +63,4 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['clientData']['clientLevel'] < 2)
 </body>
 
 </html>
+<?php unset($_SESSION['message']); ?>
